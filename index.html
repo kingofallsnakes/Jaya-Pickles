@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaya Pickles - Authentic Homemade Pickles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50 font-['Inter']">
+
+    <div id="landing" class="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden" style="background-image: url('assets/background.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+
+        <div class="text-center z-10 px-4">
+            <h1 class="font-['Playfair_Display'] text-6xl md:text-8xl font-bold text-white mb-6 cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showMainPage()">
+                Jaya Pickles
+            </h1>
+            <p class="text-xl md:text-2xl text-white opacity-90 mb-8 font-light">
+                Authentic Homemade Pickles & Karapodis
+            </p>
+            <p class="text-lg text-white opacity-80 mb-12 max-w-2xl mx-auto">
+                Experience the traditional taste of handcrafted pickles made with love and the finest ingredients
+            </p>
+            <button onclick="showMainPage()" class="bg-white text-gray-800 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg">
+                Explore Our Products
+            </button>
+        </div>
+
+        <div class="absolute top-20 left-20 w-32 h-32 bg-white opacity-10 rounded-full animate-pulse"></div>
+        <div class="absolute bottom-20 right-20 w-24 h-24 bg-white opacity-10 rounded-full animate-pulse"></div>
+        <div class="absolute top-1/2 right-10 w-16 h-16 bg-white opacity-10 rounded-full animate-pulse"></div>
+    </div>
+
+    <div id="mainPage" class="hidden min-h-screen relative" style="background-image: url('assets/main-background.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+
+        <header class="bg-white bg-opacity-90 shadow-lg sticky top-0 z-50">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between">
+                    <h1 class="font-['Playfair_Display'] text-3xl font-bold text-gray-800 cursor-pointer" onclick="showLanding()">
+                        Jaya Pickles
+                    </h1>
+                    <nav class="hidden md:flex space-x-8">
+                        <a href="#veg-pickles" class="text-gray-800 hover:text-gray-600 font-medium">Veg Pickles</a>
+                        <a href="#nonveg-pickles" class="text-gray-800 hover:text-gray-600 font-medium">Non-Veg Pickles</a>
+                        <a href="#karapodis" class="text-gray-800 hover:text-gray-600 font-medium">Karapodis</a>
+                        <a href="#contact" class="text-gray-800 hover:text-gray-600 font-medium">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <section class="py-8 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="relative overflow-hidden rounded-2xl">
+                    <div class="flex animate-slide">
+                        <div class="min-w-full h-auto max-h-[500px] flex items-center justify-center bg-black">
+                            <img src="assets/Slide1.png" alt="Delicious Pickles" class="w-full h-auto max-h-[500px] object-contain rounded-2xl">
+                        </div>
+                        <div class="min-w-full h-auto max-h-[500px] flex items-center justify-center bg-black">
+                            <img src="assets/Slide2.png" alt="Fresh Ingredients" class="w-full h-auto max-h-[500px] object-contain rounded-2xl">
+                        </div>
+                        <div class="min-w-full h-auto max-h-[500px] flex items-center justify-center bg-black">
+                            <img src="assets/Slide3.png" alt="Traditional Recipes" class="w-full h-auto max-h-[500px] object-contain rounded-2xl">
+                        </div>
+                        <div class="min-w-full h-auto max-h-[500px] flex items-center justify-center bg-black">
+                            <img src="assets/Slide4.png" alt="Homemade Quality" class="w-full h-auto max-h-[500px] object-contain rounded-2xl">
+                        </div>
+                        <div class="min-w-full h-auto max-h-[500px] flex items-center justify-center bg-black">
+                            <img src="assets/Slide5.png" alt="Authentic Taste" class="w-full h-auto max-h-[500px] object-contain rounded-2xl">
+                        </div>
+                        <div class="min-w-full h-auto max-h-[500px] flex items-center justify-center bg-black">
+                            <img src="assets/Slide6.png" alt="Authentic Taste" class="w-full h-auto max-h-[500px] object-contain rounded-2xl">
+                        </div>
+                        <div class="min-w-full h-auto max-h-[500px] flex items-center justify-center bg-black">
+                            <img src="assets/Slide7.png" alt="Authentic Taste" class="w-full h-auto max-h-[500px] object-contain rounded-2xl">
+                        </div>
+                        <div class="min-w-full h-auto max-h-[500px] flex items-center justify-center bg-black">
+                            <img src="assets/Slide8.png" alt="Authentic Taste" class="w-full h-auto max-h-[500px] object-contain rounded-2xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative py-20 bg-cover bg-center" style="background-image: url('assets/pickle-bg.png');">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="relative container mx-auto px-4 text-center text-white z-10">
+                <h2 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-4 opacity-0 translate-y-6 transition-all duration-700 ease-out" id="premiumHeading">
+                    Premium Quality Pickles
+                </h2>
+                <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto opacity-0 translate-y-6 transition-all duration-1000 delay-200 ease-out" id="premiumDesc">
+                    From traditional vegetarian pickles to exotic non-vegetarian varieties and aromatic karapodis,
+                    we bring you the authentic taste of homemade goodness.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
+                    <div class="bg-white bg-opacity-10 p-4 rounded-2xl shadow-lg hover:bg-opacity-20 transition">
+                        <img src="assets/natural-icon.png" class="mx-auto mb-3 w-12 h-12" alt="Natural">
+                        <p class="font-semibold text-white">100% Natural</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-4 rounded-2xl shadow-lg hover:bg-opacity-20 transition">
+                        <img src="assets/homemade-icon.png" class="mx-auto mb-3 w-12 h-12" alt="Homemade">
+                        <p class="font-semibold text-white">Homemade Taste</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-4 rounded-2xl shadow-lg hover:bg-opacity-20 transition">
+                        <img src="assets/spicy-icon.png" class="mx-auto mb-3 w-12 h-12" alt="Spicy">
+                        <p class="font-semibold text-white">Spicy & Tasty</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-4 rounded-2xl shadow-lg hover:bg-opacity-20 transition">
+                        <img src="assets/fresh-icon.png" class="mx-auto mb-3 w-12 h-12" alt="Fresh">
+                        <p class="font-semibold text-white">Fresh Ingredients</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="veg-pickles" class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="category-header">
+                    <h2 class="font-['Playfair_Display'] text-3xl font-bold">🌶️ Vegetarian Pickles</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="veg/onion.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Onion Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹130</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹260</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹520</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹130</option>
+                                    <option value="500g">500g - ₹260</option>
+                                    <option value="1kg">1kg - ₹520</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="veg/Garllic.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Garlic Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹130</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹260</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹520</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹130</option>
+                                    <option value="500g">500g - ₹260</option>
+                                    <option value="1kg">1kg - ₹520</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>                 
+					
+
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="veg/Coriander.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Coriander Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹130</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹260</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹520</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹130</option>
+                                    <option value="500g">500g - ₹260</option>
+                                    <option value="1kg">1kg - ₹520</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>                 
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="veg/Curry-leaves.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Curry Leaves Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹130</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹260</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹520</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹130</option>
+                                    <option value="500g">500g - ₹260</option>
+                                    <option value="1kg">1kg - ₹520</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>                 
+
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="veg/Mint-leaves.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Mint Leaves Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹130</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹260</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹520</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹130</option>
+                                    <option value="500g">500g - ₹260</option>
+                                    <option value="1kg">1kg - ₹520</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>                 
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="veg/Dondakaya.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Dondakaya Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹130</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹260</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹520</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹130</option>
+                                    <option value="500g">500g - ₹260</option>
+                                    <option value="1kg">1kg - ₹520</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>                 
+
+
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="veg/Amla.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Amla Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹130</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹260</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹520</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹130</option>
+                                    <option value="500g">500g - ₹260</option>
+                                    <option value="1kg">1kg - ₹520</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>                 
+
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="veg/Gongura-Pandu-Mirchi.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Gongura Pandu Mirchi Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹130</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹260</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹520</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹130</option>
+                                    <option value="500g">500g - ₹260</option>
+                                    <option value="1kg">1kg - ₹520</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>                 
+
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="veg/Plain-Gongura.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Plain Gongura Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹130</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹260</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹520</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹130</option>
+                                    <option value="500g">500g - ₹260</option>
+                                    <option value="1kg">1kg - ₹520</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>                 
+
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="veg/Plain-Pandu-Mirchi.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Plain Pandu Mirchi Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹130</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹260</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹520</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹130</option>
+                                    <option value="500g">500g - ₹260</option>
+                                    <option value="1kg">1kg - ₹520</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>                 
+
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="veg/Lemon.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Lemon Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹130</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹260</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹520</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹130</option>
+                                    <option value="500g">500g - ₹260</option>
+                                    <option value="1kg">1kg - ₹520</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>                 
+
+
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="veg/Green-Chilli.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Green Chilli Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹130</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹260</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹520</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹130</option>
+                                    <option value="500g">500g - ₹260</option>
+                                    <option value="1kg">1kg - ₹520</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>                 
+
+
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="veg/Mango-Thokku.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Mango Thokku Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹130</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹260</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹520</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹130</option>
+                                    <option value="500g">500g - ₹260</option>
+                                    <option value="1kg">1kg - ₹520</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>                 
+
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="veg/Tomato.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Tomato Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹130</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹260</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹520</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹130</option>
+                                    <option value="500g">500g - ₹260</option>
+                                    <option value="1kg">1kg - ₹520</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>                 
+
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="veg/Brinjal.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Brinjal Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹130</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹260</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹520</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹130</option>
+                                    <option value="500g">500g - ₹260</option>
+                                    <option value="1kg">1kg - ₹520</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>                 
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="veg/Chintakaya.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Chintakaya Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹130</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹260</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹520</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹130</option>
+                                    <option value="500g">500g - ₹260</option>
+                                    <option value="1kg">1kg - ₹520</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>                 
+
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="veg/Magaya.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Magaya Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹150</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹300</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹600</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹150</option>
+                                    <option value="500g">500g - ₹300</option>
+                                    <option value="1kg">1kg - ₹600</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>                 
+
+
+
+                 </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="nonveg-pickles" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="category-header">
+                    <h2 class="font-['Playfair_Display'] text-3xl font-bold">🍗 Non-Vegetarian Pickles</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="Non-veg/Prawn.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Prawn Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹400</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹800</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹1600</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹400</option>
+                                    <option value="500g">500g - ₹800</option>
+                                    <option value="1kg">1kg - ₹1600</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="Non-veg/Chicken.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Chicken Pickle</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹300</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹600</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹1200</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹300</option>
+                                    <option value="500g">500g - ₹600</option>
+                                    <option value="1kg">1kg - ₹1200</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section id="karapodis" class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="category-header">
+                    <h2 class="font-['Playfair_Display'] text-3xl font-bold"> Karapodis</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="Karapodi/Nalla.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="karapodi/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Nalla Kara Podi</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹150</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹300</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹600</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹150</option>
+                                    <option value="500g">500g - ₹300</option>
+                                    <option value="1kg">1kg - ₹600</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="karapodi/Putnala.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Putnala Kara Podi</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹150</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹300</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹600</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹150</option>
+                                    <option value="500g">500g - ₹300</option>
+                                    <option value="1kg">1kg - ₹600</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="karapodi/Palli.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Palli Kara Podi</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹150</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹300</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹600</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹150</option>
+                                    <option value="500g">500g - ₹300</option>
+                                    <option value="1kg">1kg - ₹600</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="karapodi/Kobbari.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Kobbari Kara Podi</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹150</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹300</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹600</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹150</option>
+                                    <option value="500g">500g - ₹300</option>
+                                    <option value="1kg">1kg - ₹600</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="pickle-card card-hover product-card">
+                        <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                            <img src="karapodi/Curry.png" alt="Onion Pickle" class="w-full h-full object-cover product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="brand-logo">
+                                <img src="assets/brand-logo.png" alt="Jaya Pickles Logo" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg mb-3">Karivepaku Kara Podi</h3>
+                            <div class="space-y-2 mb-4">
+                                <div class="flex justify-between items-center"><span class="text-gray-600">250g</span><span class="price-tag">₹150</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">500g</span><span class="price-tag">₹300</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">1kg</span><span class="price-tag">₹600</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700">Select Weight:</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg" id="onion-weight">
+                                    <option value="250g">250g - ₹150</option>
+                                    <option value="500g">500g - ₹300</option>
+                                    <option value="1kg">1kg - ₹600</option>
+                                </select>
+                                <button onclick="orderPickle('Onion Pickle', 'onion-weight')" class="w-full buy-btn text-white py-3 rounded-lg font-semibold">Order via WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+
+                  </div>
+            </div>
+        </section>
+
+<section id="contact" class="py-16 bg-gray-800 text-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="font-['Playfair_Display'] text-4xl font-bold mb-4">Contact Us</h2>
+      <p class="text-xl text-gray-300">Get in touch for fresh, homemade pickles delivered to your doorstep</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+      <!-- Contact Info -->
+      <div class="space-y-6">
+        <!-- Phone -->
+        <a href="tel:+919866327108" class="flex items-center space-x-4 group hover:scale-105 transition transform duration-300">
+          <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center group-hover:shadow-[0_0_20px_#FFA500] transition">
+            <span class="text-2xl">📱</span>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg group-hover:text-orange-400 transition">Phone</h3>
+            <p class="text-gray-300 group-hover:text-white">+91 98663 27108</p>
+          </div>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919866327108?text=I%20want%20to%20buy%20Jaya%20Pickle" target="_blank"
+          class="flex items-center space-x-4 group hover:scale-105 transition transform duration-300">
+          <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center group-hover:shadow-[0_0_20px_#00FF00] transition">
+            <span class="text-2xl">💬</span>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg group-hover:text-green-400 transition">WhatsApp</h3>
+            <p class="text-gray-300 group-hover:text-white">+91 98663 27108</p>
+          </div>
+        </a>
+
+        <!-- Address -->
+        <a href="https://maps.app.goo.gl/5PHtDYsytmrQoZvw8" target="_blank"
+          class="flex items-center space-x-4 group hover:scale-105 transition transform duration-300">
+          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center group-hover:shadow-[0_0_20px_#1E90FF] transition">
+            <span class="text-2xl">📍</span>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg group-hover:text-blue-400 transition">Address</h3>
+            <p class="text-gray-300 group-hover:text-white">
+              Jaya Kammani pachallu<br>
+              Opp Zudio, Mogalrajpuram<br>
+              Vijayawada, Andhra Pradesh.
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Why Choose Section -->
+      <div class="bg-gradient-to-br from-gray-800 to-gray-700 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+        <h3 class="font-['Playfair_Display'] text-2xl font-bold text-white mb-6 text-center">
+          Why Choose Jaya Pickles?
+        </h3>
+        <ul class="space-y-4 text-gray-200 text-lg">
+          <li class="flex items-center space-x-3 hover:text-white transition"><span class="text-green-400 text-xl">✔</span><span>100% Homemade & Fresh</span></li>
+          <li class="flex items-center space-x-3 hover:text-white transition"><span class="text-green-400 text-xl">✔</span><span>Traditional Recipes</span></li>
+          <li class="flex items-center space-x-3 hover:text-white transition"><span class="text-green-400 text-xl">✔</span><span>No Preservatives</span></li>
+          <li class="flex items-center space-x-3 hover:text-white transition"><span class="text-green-400 text-xl">✔</span><span>Premium Quality Ingredients</span></li>
+          <li class="flex items-center space-x-3 hover:text-white transition"><span class="text-green-400 text-xl">✔</span><span>Home Delivery for Vijayawada People</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <footer class="bg-gray-900 text-white py-8">
+            <div class="container mx-auto px-4 text-center">
+                <h3 class="font-['Playfair_Display'] text-2xl font-bold mb-2">Jaya Pickles</h3>
+                <p class="text-gray-400 mb-4">Authentic Homemade Pickles & Karapodis</p>
+                <p class="text-gray-500 text-sm">© 2024 Jaya Pickles. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Animation script for the features section
+        window.addEventListener('scroll', () => {
+            const heading = document.getElementById('premiumHeading');
+            const desc = document.getElementById('premiumDesc');
+            if (heading.getBoundingClientRect().top < window.innerHeight - 100) {
+                heading.classList.remove('opacity-0', 'translate-y-6');
+                desc.classList.remove('opacity-0', 'translate-y-6');
+            }
+        });
+    </script>
+</body>
+
+</html>

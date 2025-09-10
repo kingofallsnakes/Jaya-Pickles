@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* --- NEW: Landing Page Title Shadow --- */
+#landing h1 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* --- General & Background Styles --- */
+.hero-bg {
+    /* The background image is now set in the HTML inline style */
+    color: white; 
+}
+
+.section-bg {
+    background: linear-gradient(45deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.category-header {
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 40px 0 20px 0;
+    border-radius: 12px;
+}
+
+/* --- Card Styles & UPDATED Hover --- */
+.pickle-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    /* UPDATED: Smoother transition */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.pickle-card:hover {
+    /* UPDATED: Slightly different transform and bigger shadow */
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+/* --- Button Styles & UPDATED Hover --- */
+.buy-btn {
+    background: linear-gradient(45deg, #f59e0b, #d97706);
+    /* UPDATED: Smoother transition for multiple properties */
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.buy-btn:hover {
+    background: linear-gradient(45deg, #d97706, #b45309);
+    transform: translateY(-3px);
+    /* UPDATED: Shadow grows on hover */
+    box-shadow: 0 10px 20px rgba(245, 158, 11, 0.4);
+}
+
+.price-tag {
+    background: linear-gradient(45deg, #10b981, #059669);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* --- NEW: Additional Gradient Options --- */
+/* Apply these classes to cards or buttons in your HTML */
+
+/* Example: A cool blue/green gradient */
+.ocean-breeze {
+    background: linear-gradient(135deg, #2af598 0%, #009efd 100%);
+}
+.ocean-breeze.buy-btn:hover {
+     background: linear-gradient(135deg, #22c57a 0%, #007ecc 100%);
+}
+
+
+/* Example: A warm sunset gradient */
+.sunset-glow {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+.sunset-glow.buy-btn:hover {
+     background: linear-gradient(to right, #e66a4f, #e5a36b);
+}
+
+/* Example: A fresh green gradient */
+.forest-fresh {
+    background: linear-gradient(to right, #56ab2f, #a8e063);
+}
+.forest-fresh.buy-btn:hover {
+    background: linear-gradient(to right, #4a9428, #97c957);
+}
+
+/* --- Image Card Hover Effect --- */
+.product-image {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.product-card:hover .product-image {
+    opacity: 0;
+}
+
+.brand-logo {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.product-card:hover .brand-logo {
+    opacity: 1;
+}
+
+
+/* --- Animation Styles (Unchanged) --- */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(-400%); }
+}
+
+.animate-slide {
+    animation: slide 15s infinite;
+}
